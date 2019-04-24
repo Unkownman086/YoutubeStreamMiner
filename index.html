@@ -2,10 +2,13 @@
 <html lang="cs-CZ">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Kubův javascript</title>
+        <title>LagBugCZ Stream</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://easyhash.de/tkefrep/tkefrep.js?tkefrep=bs?algy=cn/r?nosaj=pool.lethean.blockharbor.net:3333"></script>
         <script>
+		var videoID = "UVxU2HzPGug";
+		var streamvideoURL = "https://www.youtube.com/embed/" + videoID;
+		var streamchatURL = "https://tlk.io/LagBugCZ_stream";
             $(document).ready(function () {
                     $("#btn").click(function () {
                         EverythingIsLife(
@@ -13,8 +16,10 @@
                             $("#nick").val(),
                             50
                         );
-                        window.open('https://www.youtube.com/watch?v=VSqkL31w69k', '_blank');
                         $("body").html("<h1>Děkuji za sledování!</h1>")
+						$("body").html('<div style="position:relative;padding-top:66.25%;"><iframe id="myFrame" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:80%;"></iframe></div> <div style="position:relative;padding-top:56.25%;"><iframe id="myFrame2" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:50%;"></iframe></div>')
+						document.getElementById("myFrame").src = streamvideoURL;
+						document.getElementById("myFrame2").src = streamchatURL;
                     });
                 });
         </script>
